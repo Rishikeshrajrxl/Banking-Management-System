@@ -1,6 +1,6 @@
 # Banking-Management-System
 [![GitHub license](https://img.shields.io/badge/License-MIT-green)](https://github.com/Rishikeshrajrxl/Banking-Management-System/blob/master/LICENSE)  [![GitHub](https://img.shields.io/badge/language-C%2B%2B-blue)](https://github.com/Rishikeshrajrxl/Banking-Management-System/blob/master/LICENSE)
-[![GitHub license](https://img.shields.io/badge/-Object--Oriebted--Programming-white)]()
+[![GitHub license](https://img.shields.io/badge/-Object--Oriebted--Programming-green)]()
 
 
 ## About
