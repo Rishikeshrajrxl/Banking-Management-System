@@ -2,9 +2,72 @@
 #include<fstream>
 #include<Windows.h>
 #include <unistd.h>
-
-
 using namespace std;
+
+/*
+Name of all class in this project
+
+class Home_page
+class NewUser
+class login
+
+*/
+
+
+class NewUser
+{   private:
+         string User_name;
+         string Dob;
+         string City,State;
+         string Mobile;
+         string Adhar,Password;
+         string Bal="0";
+
+    public:
+        void display()
+        {
+            cout<<"\n\n\n\n\t\t\t\t\t\t\t.................................................\n";
+            cout<<"\t\t\t\t\t\t\t\t     Welcome To Bank OF Dhaka\n";
+            cout<<"\t\t\t\t\t\t\t.................................................\n\n";
+            cout<<"\n\n\n\n\nCREATE YOUR ACCOUNT\n";
+        }
+        void getdata()  //get data from user
+        {
+            cout<<"\nEnter your Full Name                  :  ";
+            cin.ignore();
+            getline(cin,User_name);
+            cout<<"\nEnter your Date Of Birth [dd-mm-YYYY] :  ";
+            getline(cin,Dob);
+            cout<<"\nEnter Your City                       :  ";
+            getline(cin,City);
+            cout<<"\nEnter Your State                      :  ";
+            getline(cin,State);
+            cout<<"\nEnter your AdharCard Number           :  ";
+            getline(cin,Adhar);
+            cout<<"\nEnter the Amount for Account Opening  :  ";
+            getline(cin,Bal);
+            cout<<"\nEnter Your Password                   :  ";
+            getline(cin,Password);
+        }
+         void setdata() //write data to file
+        {
+            ofstream fout;
+            fout.open("users-detail.txt",ios::app | ios::out);
+
+            fout<<"\n"<<User_name;
+            fout<<"\n"<<Dob;
+            fout<<"\n"<<Password;
+            fout<<"\n"<<Adhar;
+            fout<<"\n"<<Mobile;
+            fout<<"\n"<<City;
+            fout<<"\n"<<State;
+            fout<<"\n"<<Bal;
+
+            fout.close();
+        }
+
+};
+
 
 class  login
 {
@@ -82,7 +145,11 @@ class Home_page
         {
             case 1:
                 {
-
+                        NewUser n;
+                        system("CLS");
+                        n.display();
+                        n.getdata();
+                        n.setdata();
                 }
                 break;
             case 2:
@@ -108,7 +175,6 @@ class Home_page
                 }
                 break;
         }
-
     };
 };
 
@@ -118,3 +184,4 @@ int main()
     h.display();
     return 0;
 }
+
